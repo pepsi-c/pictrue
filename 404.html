@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://cdpn.io/svsdesign/fullpage/ZEOvdEW -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+  
+  
+  
+  
+<style>
+body, html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+#blotter-404-container {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  height: 80vh;
+}
+#blotter-404-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0px;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div id="blotter-404-container"><canvas class="b-canvas" width="1850" height="1700" style="width: 1850px; height: 1700px;">404</canvas></div>
+    <script src="./stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js.download"></script>
+
+  <script src="./blotter.min.js.download"></script>
+<script src="./liquidDistortMaterial.js.download"></script>
+      <script id="rendered-js">
+let text = new Blotter.Text("404", {
+  family: "'Roboto Mono', monospace",
+  size: 1000,
+  weight: 400,
+  fill: "#fff",
+  paddingTop: 100,
+  paddingRight: 100,
+  paddingBottom: 100,
+  paddingLeft: 100 });
+
+
+let material = new Blotter.LiquidDistortMaterial();
+
+material.uniforms.uSpeed.value = .5;
+
+material.uniforms.uVolatility.value = .1;
+
+material.uniforms.uSeed.value = 1;
+
+let blotter = new Blotter(material, {
+  texts: text });
+
+
+let elem = document.getElementById("blotter-404-container");
+let scope = blotter.forText(text);
+
+scope.appendTo(elem);
+//# sourceURL=pen.js
+    </script>
+
+  
+
+
+
+
+ 
+</body></html>
